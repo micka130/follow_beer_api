@@ -1,0 +1,10 @@
+App\Entity\Checkin:
+    properties:
+        score:
+            - NotBlank: ~
+            - GreaterThanOrEqual: 0
+            - LessThanOrEqual: 10
+        beer:
+            - NotBlank: ~
+        user:
+            - NotBlank: ~

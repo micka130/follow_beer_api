@@ -1,0 +1,14 @@
+App\Entity\Checkin:
+    attributes:
+        score:
+            groups:
+                - 'api:checkin:post'
+                - 'api:checkin:put'
+        beer:
+            groups:
+                - 'api:checkin:post'
+                - 'api:checkin:put'
+        user:
+            groups:
+                - 'api:checkin:post'
+                - 'api:checkin:put'

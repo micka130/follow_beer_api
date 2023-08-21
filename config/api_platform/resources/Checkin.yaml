@@ -1,0 +1,13 @@
+App\Entity\Checkin:
+    operations:
+        ApiPlatform\Metadata\GetCollection: ~
+        ApiPlatform\Metadata\Get: ~
+        ApiPlatform\Metadata\Post:
+            denormalizationContext:
+                groups:
+                    - 'api:checkin:post'
+        ApiPlatform\Metadata\Put:
+            denormalizationContext:
+                groups:
+                    - 'api:checkin:put'
+        ApiPlatform\Metadata\Delete: ~

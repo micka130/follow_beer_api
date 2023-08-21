@@ -1,0 +1,4 @@
+App\Entity\Brewery:
+    properties:
+        name:
+            - NotBlank: ~

@@ -1,1 +1,31 @@
+###> IDE ###
+.DS_Store
+.idea/
+.gandi.config.yaml
+###< IDE ###
+
+###> docker ###
+/.infra/docker/.data/
+/.infra/docker/logs/
+###< docker ###
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/cache/
+/var/log/
 /vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/phpunit-bridge ###
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###

@@ -1,0 +1,26 @@
+App\Entity\User:
+    attributes:
+        email:
+            groups:
+                - 'api:user:post'
+                - 'api:user:put'
+        password:
+            groups:
+                - 'api:user:post'
+                - 'api:user:put'
+        roles:
+            groups:
+                - 'api:user:post'
+                - 'api:user:put'
+        username:
+            groups:
+                - 'api:user:post'
+                - 'api:user:put'
+        avatar:
+            groups:
+                - 'api:user:post'
+                - 'api:user:put'
+
+
+
+

@@ -1,0 +1,4 @@
+App\Entity\Beer:
+    properties:
+        name:
+            - NotBlank: ~

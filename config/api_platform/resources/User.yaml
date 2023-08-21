@@ -1,0 +1,13 @@
+App\Entity\User:
+    operations:
+        ApiPlatform\Metadata\GetCollection: ~
+        ApiPlatform\Metadata\Get: ~
+        ApiPlatform\Metadata\Post:
+            denormalizationContext:
+                groups:
+                    - 'api:user:post'
+        ApiPlatform\Metadata\Put:
+            denormalizationContext:
+                groups:
+                    - 'api:user:put'
+        ApiPlatform\Metadata\Delete: ~

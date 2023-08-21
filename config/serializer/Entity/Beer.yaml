@@ -1,0 +1,18 @@
+App\Entity\Beer:
+    attributes:
+        name:
+            groups:
+                - 'api:beer:post'
+                - 'api:beer:put'
+        abv:
+            groups:
+                - 'api:beer:post'
+                - 'api:beer:put'
+        ibu:
+            groups:
+                - 'api:beer:post'
+                - 'api:beer:put'
+        brewery:
+            groups:
+                - 'api:beer:post'
+                - 'api:beer:put'

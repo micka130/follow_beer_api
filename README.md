@@ -1,4 +1,4 @@
-# Beer Api 
+# Beer Api
 
 Beer api est une application de notation de bières.
 
@@ -19,3 +19,13 @@ Pour lancer l'initialisation de la stack, faire un `make setup`. Les conteneurs 
 Une fois lancé, `make vendor` provisionnera les vendors.
 
 Pour avoir plus d'informations sur les differentes commandes disponibles avec make, executez `make`.
+
+Pour créer la base de données, ainsi que son schema, vous pouvez executer la commande `php bin/console doctrine:migrations:migrate`
+
+## Commandes
+
+Import du fichier CSV d'OpenBeerDatabase : `php bin/console app:open-beer-database:import`
+
+## Tests
+
+Pour executer les tests, faire un `make tests`.

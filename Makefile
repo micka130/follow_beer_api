@@ -1,4 +1,4 @@
-.PHONY: docker-build start stop down install setup php destroy down migrate diff require help bash require reset_bdd fixtures
+.PHONY: docker-build start stop down install setup php destroy down migrate diff require help bash require reset_bdd fixtures tests
 
 .DEFAULT_GOAL: help
 
@@ -49,3 +49,10 @@ setup: acl .env build start ## Tache d'initialisation de l'environnement
 
 acl: ## Donne les droits d'ecriture sur le dossier
 	$(RUN_ACL)
+
+tests:
+	docker-compose exec $(CONTAINER) php bin/console doctrine:database:drop --force --env=test || true
+	docker-compose exec $(CONTAINER) php bin/console doctrine:database:create --env=test
+	docker-compose exec $(CONTAINER) php bin/console doctrine:migrations:migrate -n --env=test
+	docker-compose exec $(CONTAINER) php bin/console doctrine:fixtures:load -n --env=test
+	docker-compose exec $(CONTAINER) php bin/phpunit --stop-on-failure $@

@@ -1,0 +1,22 @@
+App\Entity\Brewery:
+    attributes:
+        name:
+            groups:
+                - 'api:brewery:post'
+                - 'api:brewery:put'
+        street:
+            groups:
+                - 'api:brewery:post'
+                - 'api:brewery:put'
+        city:
+            groups:
+                - 'api:brewery:post'
+                - 'api:brewery:put'
+        postalCode:
+            groups:
+                - 'api:brewery:post'
+                - 'api:brewery:put'
+        country:
+            groups:
+                - 'api:brewery:post'
+                - 'api:brewery:put'

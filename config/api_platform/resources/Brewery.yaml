@@ -1,0 +1,13 @@
+App\Entity\Brewery:
+    operations:
+        ApiPlatform\Metadata\GetCollection: ~
+        ApiPlatform\Metadata\Get: ~
+        ApiPlatform\Metadata\Post:
+            denormalizationContext:
+                groups:
+                    - 'api:brewery:post'
+        ApiPlatform\Metadata\Put:
+            denormalizationContext:
+                groups:
+                    - 'api:brewery:put'
+        ApiPlatform\Metadata\Delete: ~

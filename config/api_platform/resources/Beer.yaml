@@ -1,0 +1,14 @@
+App\Entity\Beer:
+    operations:
+        ApiPlatform\Metadata\GetCollection:
+            filters: [ 'beer.order_filter' ]
+        ApiPlatform\Metadata\Get: ~
+        ApiPlatform\Metadata\Post:
+            denormalizationContext:
+                groups:
+                    - 'api:beer:post'
+        ApiPlatform\Metadata\Put:
+            denormalizationContext:
+                groups:
+                    - 'api:beer:put'
+        ApiPlatform\Metadata\Delete: ~

@@ -1,0 +1,28 @@
+api_platform:
+    title: 'App Data REST API'
+    version: '1.0.0'
+    mapping:
+        paths:
+            - '%kernel.project_dir%/src/Entity' # default configuration for annotations
+            - '%kernel.project_dir%/config/api_platform/resources' # yaml or xml directory configuration
+    patch_formats:
+        json: ['application/merge-patch+json']
+    graphql:
+        enabled: false
+    swagger:
+        versions: [ 3 ]
+#        api_keys:
+#            ApiKey:
+#                name: X-AUTH-TOKEN
+#                type: header
+    enable_swagger_ui: true
+    enable_re_doc: true
+    show_webby: false
+
+services:
+    beer.order_filter:
+        parent: 'api_platform.doctrine.orm.order_filter'
+        arguments:
+            $properties: { abv: ~, ibu: ~ }
+            $orderParameterName: order
+        tags: [ 'api_platform.filter' ]
